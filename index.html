@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -18,7 +23,7 @@
 
 <!-- top part-->
     <header>
-        <img src="img/Logo.png" alt="logo de Alura">
+        <img class="logo" src="img/Logo.png" alt="logo de Alura" >
     </header>
     
 
@@ -28,20 +33,42 @@
 
     <main>
 
-        <textarea id="textEncriptador" cols="60" rows="10" class=""
-        placeholder = "ingresa tu  tu mensaje aquí"> 
-        </textarea>
-        <label for="">solo letras minisculas y sin acento</label>
-        <input type="submit" value="Encriptar"    onclick = "EncriptarTexto()" class="**">
-        <input type="submit" value="Desencriptar" onclick = "DescriptarTxto()"class="**">
-        <textarea id="textdesencriptador" cols="60" rows="10" class="">
-        </textarea>
+        <section>
 
+            <textarea class ="text-area" id="textarea" cols="40" rows="8" 
+            placeholder = " ingresa tu  tu mensaje aquí"></textarea>
+
+            <div>
+                <h6 class="informacion" id="informacion">&#10071 solo letras minisculas y sin acento</h6>
+            </div>
+
+            <div class = "botones">
+
+                <button class = "btnEncriptar" 
+                onclick = "EncriptarTexto()" >Encriptar</button>
+
+                <button class="btnDescriptar"  
+                onclick = "DescriptarTxto()" >Desencriptar </button>
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <textarea class="mensaje" id="mensaje" cols="20" rows="10" 
+            placeholder="Ningún mensaje fue encontrado"></textarea>
+            <div>
+                <button class="btncopiar" 
+                onclick="copiarCliboard()">copiar</button>
+            </div>
+
+        </section>
 
     </main>
 
 <!-- top part-->
-    <footer></footer>
+  
     <script src="logica.js"></script>
 </body>
 </html>
